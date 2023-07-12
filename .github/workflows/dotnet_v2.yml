@@ -24,7 +24,7 @@ jobs:
       run: |
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
         mkdir reports
-        horusec start -p="./" --output-format='text' --json-output-file="./reports/horusec_report.txt"
+        horusec start -p="./" -D="true" --output-format='text' --json-output-file="./reports/horusec_report.txt"
     - name: Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
